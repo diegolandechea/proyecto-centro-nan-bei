@@ -1,11 +1,11 @@
-/* reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* paleta de colores */
+/* PALETA DE COLORES */
 :root {
   --main-bg: #181818;
   --main-red: #e63946;
@@ -13,6 +13,7 @@
   --main-text: #fff3e6;
 }
 
+/* BODY */
 body {
   background: var(--main-bg);
   color: var(--main-text);
@@ -20,7 +21,7 @@ body {
   min-height: 100vh;
 }
 
-/* logo */
+/* LOGOS */
 .logo-nan-bei,
 .footer-logo {
   object-fit: contain;
@@ -42,9 +43,7 @@ body {
   border: 3px solid var(--main-red);
 }
 
-/* /logo */
-
-/* header */
+/* HEADER Y NAVBAR */
 .header {
   background: var(--main-bg);
   padding: 0.5rem 0;
@@ -122,11 +121,7 @@ body {
   top: 0;
 }
 
-/* /header */
-
-/* ***HONME*** */
-
-/* hero */
+/* HERO */
 .main-hero {
   position: relative;
   min-height: 100vh;
@@ -193,14 +188,9 @@ body {
 .ubicacion a {
   text-decoration: none;
   color: var(--main-text);
-  ;
 }
 
-/* /hero */
-/* /***HONME*** */
-
-/* ***ESTILOS*** */
-
+/* ESTILOS - SECCIÓN ESTILOS */
 .estilos-section {
   max-width: 1100px;
   margin: 0 auto;
@@ -259,10 +249,7 @@ body {
   color: var(--main-text);
 }
 
-/* /***ESTILOS*** */
-
-/* ***NAN-BEI */
-
+/* NAN-BEI  */
 .filosofia-icon {
   color: var(--main-orange);
   font-size: 1.2rem;
@@ -274,10 +261,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* /NAN-BEI */
-
-/* ***SIFUS */
-
+/* SIFUS */
 .sifus-title {
   color: var(--main-red);
   margin-bottom: 3rem;
@@ -313,22 +297,7 @@ body {
   background: var(--main-orange);
 }
 
-
-@media (max-width: 767px) {
-  .sifus-title {
-    font-size: 2rem;
-  }
-
-  .sifu-img {
-    height: 180px;
-    object-fit: cover;
-  }
-}
-
-/* /***SIFUS */
-
-/* ***CONTACTO*** */
-
+/* CONTACTO */
 .contacto-title {
   color: var(--main-red);
   font-size: 2.3rem;
@@ -399,8 +368,8 @@ body {
   padding: 0.5rem 0;
   display: block;
   margin-top: 0.5rem;
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .btn-enviar:hover {
@@ -408,17 +377,7 @@ body {
   color: #fff3e6;
 }
 
-@media (max-width: 767px) {
-  .contacto-title {
-    font-size: 1.5rem;
-  }
-
-  .contacto-icon {
-    font-size: 2rem;
-  }
-}
-
-/* footer */
+/* FOOTER */
 footer {
   background: #111;
   color: var(--main-orange);
@@ -451,9 +410,11 @@ footer {
   letter-spacing: 1px;
 }
 
-/* /footer */
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+   ========================= */
 
-/* responsive */
+/* >= 992px (Desktop) */
 @media (max-width: 991px) {
   .logo-nan-bei {
     height: 50px;
@@ -464,8 +425,17 @@ footer {
     width: 70px;
     height: 70px;
   }
+
+  .estilos-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .estilo-row {
+    gap: 1rem;
+  }
 }
 
+/* >= 768px (Tablet) */
 @media (max-width: 767px) {
   .header {
     padding: 0.5rem;
@@ -486,8 +456,46 @@ footer {
   .footer-icons {
     gap: 1.2rem;
   }
+
+  .estilo-row,
+  .estilo-row.reverse {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .estilo-img,
+  .estilo-info {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .estilos-section h1 {
+    font-size: 2rem;
+  }
+
+  .estilo-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .sifus-title {
+    font-size: 2rem;
+  }
+
+  .sifu-img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .contacto-title {
+    font-size: 1.5rem;
+  }
+
+  .contacto-icon {
+    font-size: 2rem;
+  }
 }
 
+/* >= 576px (Mobile) */
 @media (max-width: 575px) {
   .hero-content h1 {
     font-size: 1.5rem;
