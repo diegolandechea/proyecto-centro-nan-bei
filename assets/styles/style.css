@@ -1,0 +1,500 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* paleta de colores */
+:root {
+  --main-bg: #181818;
+  --main-red: #e63946;
+  --main-orange: #ff914d;
+  --main-text: #fff3e6;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--main-text);
+  font-family: 'Noto Sans SC', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* logo */
+.logo-nan-bei,
+.footer-logo {
+  object-fit: contain;
+  border-radius: 50%;
+  background: #222;
+  box-shadow: 0 2px 12px #0005;
+}
+
+.logo-nan-bei {
+  height: 70px;
+  width: 70px;
+  margin-right: 1.5rem;
+}
+
+.footer-logo {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1.2rem;
+  border: 3px solid var(--main-red);
+}
+
+/* /logo */
+
+/* header */
+.header {
+  background: var(--main-bg);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+  color: var(--main-orange);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--main-red);
+}
+
+.navbar-toggler {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0.5rem 0.75rem;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  display: none;
+}
+
+.custom-toggler-icon {
+  width: 28px;
+  height: 3px;
+  background: var(--main-orange);
+  display: block;
+  position: relative;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+.custom-toggler-icon::before,
+.custom-toggler-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  background: var(--main-orange);
+  border-radius: 2px;
+  transition: transform 0.3s, top 0.3s, opacity 0.3s;
+}
+
+.custom-toggler-icon::before {
+  top: -9px;
+}
+
+.custom-toggler-icon::after {
+  top: 9px;
+}
+
+.navbar-toggler:not(.collapsed) .custom-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler:not(.collapsed) .custom-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler:not(.collapsed) .custom-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* /header */
+
+/* ***HONME*** */
+
+/* hero */
+.main-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main-hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: grayscale(100%) blur(1px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--main-orange);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--main-red);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px #000a;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--main-orange);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 6px #000a;
+}
+
+.ubicacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--main-text);
+  background: rgba(24, 24, 24, 0.7);
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  width: fit-content;
+  margin: 0 auto;
+  box-shadow: 0 2px 12px #0005;
+}
+
+.ubicacion a {
+  text-decoration: none;
+  color: var(--main-text);
+  ;
+}
+
+/* /hero */
+/* /***HONME*** */
+
+/* ***ESTILOS*** */
+
+.estilos-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem 2rem 1rem;
+}
+
+.estilos-section h1 {
+  text-align: center;
+  color: var(--main-red);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.estilo-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.estilo-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.estilo-img {
+  flex: 1 1 320px;
+  max-width: 350px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.estilo-img img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px #0005;
+}
+
+.estilo-info {
+  flex: 2 1 350px;
+  color: var(--main-text);
+}
+
+.estilo-info h2 {
+  color: var(--main-orange);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.estilo-info p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--main-text);
+}
+
+/* /***ESTILOS*** */
+
+/* ***NAN-BEI */
+
+.filosofia-icon {
+  color: var(--main-orange);
+  font-size: 1.2rem;
+}
+
+.filosofia-list li {
+  font-size: 1.1rem;
+  color: var(--main-text);
+  letter-spacing: 0.5px;
+}
+
+/* /NAN-BEI */
+
+/* ***SIFUS */
+
+.sifus-title {
+  color: var(--main-red);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.sifus-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--main-red);
+}
+
+.sifu-img {
+  object-fit: cover;
+  height: 260px;
+  border-radius: 1rem 1rem 0 0;
+  filter: grayscale(100);
+}
+
+.sifu-name {
+  color: var(--main-text);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-orange);
+}
+
+
+@media (max-width: 767px) {
+  .sifus-title {
+    font-size: 2rem;
+  }
+
+  .sifu-img {
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+/* /***SIFUS */
+
+/* ***CONTACTO*** */
+
+.contacto-title {
+  color: var(--main-red);
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+}
+
+.contacto-icons {
+  gap: 2.5rem !important;
+}
+
+.contacto-icon-link {
+  text-decoration: none;
+  color: var(--main-orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.contacto-icon-link:hover .contacto-icon {
+  color: var(--main-red);
+}
+
+.contacto-icon {
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.contacto-label {
+  color: var(--main-text);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.contacto-form .contacto-input {
+  background: #222;
+  border: 1.5px solid var(--main-orange);
+  color: var(--main-text);
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.contacto-form .contacto-input:focus {
+  border-color: var(--main-red);
+  outline: none;
+  background: #181818;
+  color: var(--main-text);
+}
+
+.contacto-input::placeholder {
+  color: #fff !important;
+  opacity: 1;
+}
+
+.btn-enviar {
+  background: var(--main-orange);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.7rem;
+  font-size: 1.05rem;
+  border: none;
+  transition: background 0.2s;
+  width: 120px;
+  padding: 0.5rem 0;
+  display: block;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.btn-enviar:hover {
+  background: var(--main-red);
+  color: #fff3e6;
+}
+
+@media (max-width: 767px) {
+  .contacto-title {
+    font-size: 1.5rem;
+  }
+
+  .contacto-icon {
+    font-size: 2rem;
+  }
+}
+
+/* footer */
+footer {
+  background: #111;
+  color: var(--main-orange);
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  color: var(--main-orange);
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.footer-icons a:hover {
+  color: var(--main-red);
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  color: #fff3e6;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* /footer */
+
+/* responsive */
+@media (max-width: 991px) {
+  .logo-nan-bei {
+    height: 50px;
+    width: 50px;
+  }
+
+  .footer-logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer-icons {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
