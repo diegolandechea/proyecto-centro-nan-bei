@@ -19,6 +19,17 @@ body {
   color: var(--main-text);
   font-family: 'Noto Sans SC', Arial, sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main.container {
+  flex: 1 0 auto;
 }
 
 /* LOGOS */
@@ -298,6 +309,10 @@ body {
 }
 
 /* CONTACTO */
+.contacto-section{
+  margin: 0 auto;
+} 
+
 .contacto-title {
   color: var(--main-red);
   font-size: 2.3rem;
